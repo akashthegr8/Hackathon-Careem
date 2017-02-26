@@ -144,6 +144,7 @@ $scope.loginData = {};
       
       payload = $scope.loginData;
       
+      
       $ionicLoading.show(); 
        $http.post("http://localhost:8080/login", payload)
             .then(function (list) {
@@ -176,7 +177,7 @@ $scope.loginData = {};
        });
       
       
-         
+         $scope.loginData = {};
         
   };
   
@@ -470,6 +471,17 @@ $scope.startNewRide = function(){
 $scope.gotohome = function(){
     $state.go("homescreen");
     
+}
+
+$scope.gotomaps = function(){
+    $state.go("MapsShow");
+    
+}
+
+$scope.signout = function(){
+    $rootScope.user = {};
+    $scope.user = {};
+    $state.go("start");
 }
 
 
