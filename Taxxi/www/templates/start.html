@@ -1,0 +1,46 @@
+<!--
+  #TIP: in this case we hide the navbar provided by navigation system.
+-->
+<ion-view hide-nav-bar="true">
+  
+  <!-- 
+    #IMPLEMENTATION-DETAIL
+    We are using custom classes in "scss/scaffolding.scss"
+  -->
+  <ion-content class="padding full-height">
+    <h2 class="text-center white-color home-title">
+        Taxxi
+    </h2>
+    
+    <h3 class="white-color text-center sans-pro-light">
+        Book A Cab<br>
+        <img src="img/ionic.png" height="40%" width="40%" />
+    </h3>
+    
+
+
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <button class="button button-large button-positive button-block" ui-sref="login">Old School Login</button>        
+            <!-- <button class="button button-large button-positive button-block" ui-sref="MapsShow">Maps</button>         -->
+        </div>
+        <div class="col col-20"></div>
+    </div>
+	
+	<div class="button-bar social-login">
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900"  ng-click="googleSignIn()">Google+</button>
+            <!--<button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>-->
+        </div>       
+
+  </ion-content>
+
+  <!--
+   We put a link to signup screen in footer bar.
+  -->
+  <ion-footer-bar ui-sref="app.signup" class="bar bar-positive bar-deepblue-bordertop pointer">
+    <right><h1 class="title sans-pro-light">Signup here</h1></right>
+  </ion-footer-bar>
+
+</ion-view>

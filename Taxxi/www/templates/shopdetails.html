@@ -1,0 +1,49 @@
+<ion-view view-title="Shop Details" hide-back-button="true">
+	
+	<ion-nav-buttons side="right">
+    <span ui-sref="start">
+      
+    </span>
+    </ion-nav-buttons>
+
+    <ion-content>
+    	<div class="bar bar-header bar-positive">
+		  <h1 class="title">{{ShopName}}}</h1>
+		</div>
+
+		<button class="button icon-left button-block button-positive" ng-click="rateShop()">Rating : {{shopRating}}</button>
+
+		<button class="button icon-left ion-star button-block button-positive" ng-click="markFav()"></button>
+
+		<div class="list">
+
+		  <div class="item item-divider">
+		    Categories offered
+		  </div>
+
+		  <a class="item" href="#">
+		  </a>
+
+		</div>
+
+		<div class="item item-divider">
+		    Reviews
+		</div>
+
+		<div class="list">
+
+		    <a class="item item-avatar" href="#">
+		      <img src="img/ionic.jpg">
+		      <h2>{{userName}}</h2>
+		      <p>{{userReview}}</p>
+		    </a>
+
+		</div>
+
+
+		<button class="button button-block button-positive" ng-click="addReview()">Add review</button>
+
+    </ion-content>
+
+
+</ion-view>

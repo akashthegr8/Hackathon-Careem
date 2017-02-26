@@ -1,0 +1,41 @@
+<ion-view view-title="Account" hide-back-button="false">
+  <!-- 
+    #IMPLEMENTATION-DETAIL;
+    all view content is wrapped in a form in order to be able to leverage
+    angular 'form' directive in all the view.
+    #TIP: The form must have a "name" property set for using angular validation.
+  -->
+  <form name="accountForm">
+  
+  <!-- main content -->
+  <ion-content>
+    
+    <div class=" text-center ui-gradient-deepblue padding">
+        <img class="avatar-account" ng-src="{{user.avatar}}">
+    </div>
+    
+    <!-- form fields -->
+    <!-- 
+      #IMPLEMENTATION-DETAIL:
+      ng-readonly is set on each field and bound to $scope.readonly
+    -->
+    <label class="item item-input">
+      <span class="input-label">User Name</span>
+      <input type="text" ng-model="user.username" name="email" ng-readonly="readonly" required>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Email Id</span>
+      <input type="text" ng-model="user.useremail" name="name" ng-readonly="readonly" required>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Contact No</span>
+      <input type="text" ng-model="user.contactno" name="address" ng-readonly="readonly" required>
+    </label>
+
+  </ion-content>
+
+  
+  
+  </form>
+
+</ion-view>

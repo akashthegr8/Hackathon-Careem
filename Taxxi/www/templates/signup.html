@@ -1,0 +1,48 @@
+<!--
+  #TIP: in this case we hide the navbar provided by navigation system.
+-->
+<ion-view hide-nav-bar="true">
+
+  <ion-header-bar class="bar bar-deepblue bar-deepblue-borderbottom">
+    <button ui-sref="start" class="button button-clear button-deepblue-white"><i class="white-color ion-arrow-left-c"></i></button>
+    <h2 class="title">Signup</h2>
+  </ion-header-bar>
+
+  <ion-content class="has-header has-footer padding full-height text-center">
+
+    <div style="padding-top:50px;">
+    <h3 class="sans-pro-light">Please provide this information</h3>
+
+    <label class="item item-input ">
+        <input type="text" placeholder="Name" ng-model="data.username">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="Email Id" ng-model="data.useremail">
+    </label>
+    <label class="item item-input">
+        <input type="number" placeholder="Contact No." ng-model="data.contactno">
+    </label>
+    <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="data.password">
+    </label>
+    <label class="item item-input">
+        <input type="password" placeholder="Repeat Password" ng-model="data.cpass">
+    </label>
+
+    <!--
+      #NOT-IMPLEMENTED:
+      the button does nothing, implementation is up to you!
+    -->
+    <button class="button button-block button-energized" ng-click="signupCall()" data-ng-controller="SignupCtrl">SIGNUP</button>
+    
+    </div>
+    
+    
+  </ion-content>
+
+  <!-- we provide a link back to login in footer bar -->
+  <ion-footer-bar class="bar bar-deepblue bar-deepblue-bordertop pointer" ui-sref="login">
+    <h1 class="title sans-pro-light">Login</h1>
+  </ion-footer-bar>
+
+</ion-view>
